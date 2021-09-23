@@ -39,12 +39,14 @@ h1 {
 
 .container {
     position: relative;
-    width: 85%;
+    width: 100%;
     margin: auto;
     min-height: 100vh;
 }
 
 .container header {
+    width: 85%;
+    margin: 0 auto;
     height: 20vh;
     display: flex;
     align-items: center;
@@ -56,6 +58,8 @@ h1 {
 }
 
 .container .content {
+    margin: 0 auto;
+    width: 85%;
     min-height: 80vh;
     display: flex;
     align-items: flex-start;

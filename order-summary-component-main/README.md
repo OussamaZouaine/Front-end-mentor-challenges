@@ -10,5 +10,5 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ### Links
 
--   Solution URL: [https://github.com/OussamaZouaine/Front-end-mentor-challenges/tree/main/order-summary-component-main]()
--   Live Site URL: [https://oussamazouaine.github.io/Front-end-mentor-challenges/order-summary-component-main/index.html]()
+-   Solution URL: [Solution file](https://github.com/OussamaZouaine/Front-end-mentor-challenges/tree/main/order-summary-component-main)
+-   Live Site URL: [The live site](https://oussamazouaine.github.io/Front-end-mentor-challenges/order-summary-component-main/index.html)
