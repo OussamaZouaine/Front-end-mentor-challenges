@@ -11,4 +11,4 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ### Links
 
 -   Solution URL: [https://github.com/OussamaZouaine/Front-end-mentor-challenges/tree/main/profile-card-component]()
--   Live Site URL: [https://github.com/OussamaZouaine/Front-end-mentor-challenges/profile-card-component/index.html]()
+-   Live Site URL: [https://oussamazouaine.github.io/Front-end-mentor-challenges/profile-card-component/index.html]()
