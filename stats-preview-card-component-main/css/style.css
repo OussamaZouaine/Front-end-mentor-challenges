@@ -110,12 +110,8 @@ section ul p {
 .overlay {
     background: var(--bg-violet);
     height: 100%;
-}
-
-.overlay-2 {
-    background: var(--bg-light-violet);
-    height: 100%;
-    mix-blend-mode: color-burn;
+    opacity: 0.8;
+    mix-blend-mode: hard-light;
 }
 
 /* media queries */
