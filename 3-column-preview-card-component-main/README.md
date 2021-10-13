@@ -10,5 +10,5 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ### Links
 
--   Solution URL: [Solution file](https://github.com/OussamaZouaine/Front-end-mentor-challenges/tree/main/stats-preview-card-component-main)
--   Live Site URL: [The live site](https://oussamazouaine.github.io/Front-end-mentor-challenges/stats-preview-card-component-main/index.html)
+-   Solution URL: [Solution file](https://github.com/OussamaZouaine/Front-end-mentor-challenges/tree/main/3-column-preview-card-component-main)
+-   Live Site URL: [The live site](https://oussamazouaine.github.io/Front-end-mentor-challenges/3-column-preview-card-component-main/index.html)
