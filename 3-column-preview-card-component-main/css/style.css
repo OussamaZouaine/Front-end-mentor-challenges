@@ -1,0 +1,115 @@
+/* ? font-family: 'Big Shoulders Display', cursive;
+? font-family: 'Lexend Deca', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    font-size: 15px;
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(172, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-light-gray);
+    min-height: 100vh;
+    font-family: 'Lexenda Deca', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 55%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 100px 0;
+}
+
+.card {
+    padding: 50px;
+}
+
+.card h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    margin: 30px 0;
+}
+
+.card p {
+    color: var(--transparent-white);
+    line-height: 1.6;
+}
+
+.card .btn {
+    padding: 15px 30px;
+    margin-top: 70px;
+    background-color: var(--very-light-gray);
+    border: none;
+    border-radius: 99px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: inherit;
+    cursor: pointer;
+}
+
+.card .btn:hover {
+    background-color: transparent;
+    color: var(--very-light-gray);
+    box-shadow: 0px 0px 0px 1px var(--very-light-gray);
+}
+
+.container .sedans-card {
+    background-color: var(--bright-orange);
+    color: var(--bright-orange);
+}
+
+.container .suvs-card {
+    background-color: var(--dark-cyan);
+    color: var(--dark-cyan);
+}
+
+.container .luxury-card {
+    background-color: var(--very-dark-cyan);
+    color: var(--very-dark-cyan);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 70%;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 769px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 426px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media (max-width: 376px) {
+    .card .btn {
+        margin-top: 30px;
+    }
+}
