@@ -82,7 +82,7 @@ footer {
 .container .monthly-sub h2,
 .container .why-us h2 {
     color: var(--light-gray);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 1.3rem;
 }
 
@@ -131,3 +131,47 @@ footer {
 }
 
 /* ----- End Single Price Grid design ----- */
+
+/* ----- Start the Media Queries ----- */
+
+@media (max-width: 426px), (max-width: 376px) {
+    .container {
+        grid-template-columns: 1fr;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 20px 40px var(--grayish-blue);
+        overflow: hidden;
+        margin: 20px;
+    }
+
+    .container > * {
+        padding: 35px;
+    }
+
+    .container .join {
+        grid-column: auto;
+    }
+
+    .container .join h1 {
+        font-size: 1.4rem;
+    }
+
+    .container .join h3 {
+        font-size: 1rem;
+    }
+
+    .container .join p {
+        width: 100%;
+    }
+
+    .container .monthly-sub h2,
+    .container .why-us h2 {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+/* ----- End the Media Queries ----- */
