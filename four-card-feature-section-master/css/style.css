@@ -28,27 +28,6 @@ body {
     position: relative;
 }
 
-/* ----- Start Attribution design ----- */
-footer {
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    /* transform-origin: 0 0;
-    transform: rotate(-90deg); */
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
-/* ----- End Attribution design ----- */
-
 /* ----- Start header design ----- */
 header {
     color: var(--grayish-blue);
@@ -137,3 +116,86 @@ header p {
 }
 
 /* ----- End Cards Design ----- */
+
+/* ----- Start Media Queries ----- */
+@media (max-width: 1025px) and (min-width: 770px) {
+    header {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    .card-container {
+        gap: 25px;
+    }
+
+    .card-container .card {
+        width: 360px;
+        height: 230px;
+    }
+
+    .card-container .card h2 {
+        font-size: 1.4rem;
+    }
+
+    .card-container .card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .card-container {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media (max-width: 426px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        width: 300px;
+    }
+
+    .card-container .card {
+        width: 340px;
+        height: 230px;
+    }
+
+    .card-container .card h2 {
+        font-size: 1.4rem;
+    }
+
+    .card-container .card p {
+        font-size: 0.9rem;
+    }
+}
+/* ----- End Media Queries ----- */
+
+/* ----- Start Attribution design ----- */
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ----- End Attribution design ----- */
