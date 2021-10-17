@@ -3,11 +3,14 @@
 
 :root {
     font-size: 16px;
-    --cyan: hsl(179, 62%, 43%);
+    --cyan-color: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 47%, 52%);
     --bright-yellow: hsl(71, 73%, 54%);
 
     --light-gray: hsl(204, 43%, 93%);
     --grayish-blue: hsl(218, 22%, 67%);
+
+    --other-cyan: hsl(179, 44%, 50%);
 }
 
 *,
@@ -19,5 +22,112 @@
 }
 
 body {
+    background-color: var(--light-gray);
     font-family: 'Karla', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
+footer {
+    position: absolute;
+    bottom: 10px;
+}
+
+/* ----- Start Single Price Grid design ----- */
+
+.container {
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 20px 40px var(--grayish-blue);
+    overflow: hidden;
+}
+
+.container > * {
+    padding: 40px;
+}
+
+.container .join {
+    grid-column: span 2;
+}
+
+.container .join h1 {
+    color: var(--cyan-color);
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+.container .join h3 {
+    color: var(--bright-yellow);
+    margin-bottom: 15px;
+}
+
+.container .join p {
+    width: 90%;
+    line-height: 1.7;
+    color: var(--grayish-blue);
+    margin-bottom: 10px;
+}
+
+.container .monthly-sub {
+    background-color: var(--cyan-color);
+}
+
+.container .monthly-sub h2,
+.container .why-us h2 {
+    color: var(--light-gray);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.container .monthly-sub .price {
+    color: var(--light-gray);
+    font-weight: 700;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.container .monthly-sub .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 10px;
+    color: hsla(202, 7%, 78%, 0.5);
+}
+
+.container .monthly-sub p {
+    color: #a1dfe6;
+}
+
+.container .monthly-sub .btn {
+    margin-top: 35px;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bright-yellow);
+    color: var(--light-gray);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.container .why-us {
+    background-color: var(--light-cyan);
+}
+
+.container .why-us ul {
+    color: #a1dfe6;
+    list-style: none;
+    line-height: 1.5;
+}
+
+/* ----- End Single Price Grid design ----- */
