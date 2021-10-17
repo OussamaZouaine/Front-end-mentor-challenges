@@ -11,4 +11,4 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 ### Links
 
 -   Solution URL: [Solution file](https://github.com/OussamaZouaine/Front-end-mentor-challenges/tree/main/four-card-feature-section-master)
--   Live Site URL: [The live site](https://github.com/OussamaZouaine/Front-end-mentor-challenges/tree/main/four-card-feature-section-master/index.html)
+-   Live Site URL: [The live site](https://oussamazouaine.github.io/Front-end-mentor-challenges/four-card-feature-section-master/index.html)
