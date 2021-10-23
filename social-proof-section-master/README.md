@@ -12,3 +12,5 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
 
 -   Solution URL: [Solution file](https://github.com/OussamaZouaine/Front-end-mentor-challenges/tree/main/social-proof-section-master)
 -   Live Site URL: [The live site](https://oussamazouaine.github.io/Front-end-mentor-challenges/social-proof-section-master/index.html){:target="\_blank"}
+
+<a href="https://oussamazouaine.github.io/Front-end-mentor-challenges/social-proof-section-master/index.html" target="_blank">The live site</a>
