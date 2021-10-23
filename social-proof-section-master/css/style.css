@@ -140,3 +140,154 @@ header .rating div p {
     font-size: 0.97rem;
     line-height: 1.8;
 }
+
+/* ----- Attribution ----- */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ----- End Attribution ----- */
+
+/* ----- Start Media Queries ----- */
+
+@media (max-width: 1025px) {
+    body {
+        padding: 70px;
+    }
+
+    header .about-us h1 {
+        width: 85%;
+        font-size: 2.5rem;
+    }
+
+    header .about-us p {
+        width: 85%;
+        font-size: 0.95rem;
+    }
+
+    header .rating div:nth-child(2) {
+        transform: translateX(10%);
+    }
+
+    header .rating div:nth-child(3) {
+        transform: translateX(20%);
+    }
+
+    header .rating div {
+        padding: 20px;
+    }
+
+    header .rating div ul {
+        margin-right: 10px;
+    }
+
+    header .rating div p {
+        margin: 0 30px 0 10px;
+    }
+
+    .testimonial .card {
+        padding: 30px;
+    }
+
+    .testimonial .card:nth-child(2) {
+        transform: translateY(6%);
+    }
+
+    .testimonial .card:nth-child(3) {
+        transform: translateY(12%);
+    }
+}
+
+@media (max-width: 769px) {
+    header {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    header .about-us {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .about-us h1 {
+        width: 70%;
+    }
+
+    header .about-us p {
+        width: 100%;
+    }
+
+    header .rating div:nth-child(2),
+    header .rating div:nth-child(3) {
+        transform: translateX(0%);
+    }
+
+    header .rating div {
+        padding: 20px 40px;
+    }
+
+    header .rating div ul {
+        margin-right: 40px;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .testimonial .card .user p span {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 426px) {
+    body {
+        padding: 30px;
+    }
+
+    header {
+        margin-bottom: 30px;
+    }
+
+    header .about-us h1 {
+        width: 90%;
+        font-size: 2rem;
+    }
+
+    header .about-us p {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    header .rating div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    header .rating div ul {
+        margin: 0;
+    }
+
+    header .rating div p {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    .attribution {
+        display: none;
+    }
+}
+
+/* ----- End Media Queries ----- */
