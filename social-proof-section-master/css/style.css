@@ -23,4 +23,120 @@
 
 body {
     font-family: 'Spartan', sans-serif;
+    min-height: 100vh;
+    padding: 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+header .about-us {
+    width: 50%;
+}
+
+header .about-us h1 {
+    width: 75%;
+    font-size: 3rem;
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+header .about-us p {
+    width: 75%;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: var(--dark-grayish-magenta);
+}
+
+header .rating div:nth-child(2) {
+    transform: translateX(12%);
+}
+
+header .rating div:nth-child(3) {
+    transform: translateX(24%);
+}
+
+header .rating div {
+    display: flex;
+    padding: 20px 30px;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header .rating div ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+header .rating div ul li {
+    padding: 0 5px;
+}
+
+header .rating div p {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--very-dark-magenta);
+    margin: 0 40px 0 15px;
+}
+
+.testimonial {
+    display: flex;
+    gap: 30px;
+}
+
+.testimonial .card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--very-dark-magenta);
+    border-radius: 10px;
+    padding: 40px;
+    color: var(--white);
+}
+
+.testimonial .card:nth-child(2) {
+    transform: translateY(8%);
+}
+
+.testimonial .card:nth-child(3) {
+    transform: translateY(16%);
+}
+
+.testimonial .card .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.testimonial .card .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.testimonial .card .user p {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.testimonial .card .user p span {
+    display: block;
+    margin-top: 5px;
+    font-weight: 500;
+    color: var(--soft-pink);
+    font-size: 0.9rem;
+}
+
+.testimonial .card p {
+    font-size: 0.97rem;
+    line-height: 1.8;
 }
