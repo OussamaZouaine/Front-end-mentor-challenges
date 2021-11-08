@@ -92,7 +92,6 @@ body {
 .card {
     padding: 1.8rem;
     border-radius: 5px;
-    position: relative;
 }
 
 .card .user {
@@ -126,4 +125,44 @@ body {
 .card > p {
     opacity: 0.7;
     line-height: 1.6;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1025px) {
+    .cards-container {
+        max-width: 950px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .cards-container {
+        padding: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: initial;
+    }
+
+    .grid-area-a,
+    .grid-area-b,
+    .grid-area-c,
+    .grid-area-d,
+    .grid-area-e {
+        grid-column: auto;
+        grid-row: initial;
+    }
+
+    .bg-violet {
+        background-position: 85% 0%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: initial;
+    }
+
+    .bg-violet {
+        background-position: 90% 0%;
+    }
 }
