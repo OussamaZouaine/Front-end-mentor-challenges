@@ -143,7 +143,6 @@ body {
     .cards-container {
         padding: 30px;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-template-rows: initial;
     }
 
     .grid-area-a,
@@ -160,10 +159,15 @@ body {
     }
 }
 
+@media screen and (max-width: 640px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width: 426px) {
     .cards-container {
         grid-template-columns: 1fr;
-        grid-template-rows: initial;
     }
 
     .bg-violet {
