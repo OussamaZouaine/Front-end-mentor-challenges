@@ -118,8 +118,12 @@ body {
     opacity: 0.5;
 }
 
-.card h2 {
+.card h1 {
     margin: 1.3rem 0;
+}
+
+.card.bg-white h1 {
+    color: var(--very-dark-grayish-blue);
 }
 
 .card > p {
