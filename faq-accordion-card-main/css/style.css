@@ -13,7 +13,7 @@
 
     /* color neutral text */
     --very-dark-grayish-blue: hsl(237, 12%, 33%);
-    --dark-grayish-blue: hsl(240%, 6%, 50%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
 
     /* color neutral dividers */
     --light-grayish-blue: hsl(240, 5%, 91%);
@@ -34,4 +34,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 950px;
+    height: 500px;
+    background: white;
+    border-radius: 2rem;
 }
