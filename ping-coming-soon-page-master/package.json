@@ -1,0 +1,23 @@
+{
+  "name": "ping-coming-soon-page-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Ping coming soon page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch-css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OussamaZouaine/Front-end-mentor-challenges.git"
+  },
+  "author": "oussama zouaine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OussamaZouaine/Front-end-mentor-challenges/issues"
+  },
+  "homepage": "https://github.com/OussamaZouaine/Front-end-mentor-challenges#readme",
+  "dependencies": {
+    "tailwindcss": "^3.0.5"
+  }
+}
