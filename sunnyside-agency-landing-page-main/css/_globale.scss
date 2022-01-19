@@ -13,6 +13,7 @@
 body {
     max-width: 1440px;
     min-height: 100vh;
+    margin: 0 auto;
     background-color: $white;
     font-family: $barlow;
 }
@@ -34,4 +35,17 @@ h1,
 h2,
 h3 {
     font-family: $fraunces;
+}
+
+.btn {
+    padding: 1em 2em;
+    background-color: $yellow;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $very-dark-desaturated-blue;
+    font-family: $fraunces;
+    display: inline-block;
+    margin-top: 0.2em;
 }
