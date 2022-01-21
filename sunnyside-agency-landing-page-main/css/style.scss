@@ -1,4 +1,4 @@
-@import 'globale';
+@import 'global';
 
 header {
     background: url('../images/mobile/image-header.jpg');
@@ -30,7 +30,10 @@ header {
             align-items: center;
             row-gap: 1.7em;
             padding: 2em;
-            display: none;
+            transform: translateY(-130%);
+            transition: transform 0.5s ease-in-out;
+
+            // display: none;
 
             .triangle {
                 position: absolute;
@@ -39,7 +42,7 @@ header {
                 height: 20px;
                 clip-path: polygon(100% 0, 0% 100%, 100% 100%);
                 top: -19px;
-                right: -0.5px;
+                right: 0px;
             }
 
             li {
@@ -55,6 +58,12 @@ header {
         .menu {
             cursor: pointer;
         }
+
+        .open-menu {
+            // display: none;
+            transform: translateY(0);
+            animation: reveal 1.5s ease-in-out alternate;
+        }
     }
 
     .hero {
@@ -67,7 +76,7 @@ header {
 
         h1 {
             color: $white;
-            font-size: clamp(2.3rem, 8vw, 4rem);
+            font-size: clamp(2.3rem, 8vw, 3rem);
             line-height: clamp(3rem, 8vw, 4rem);
             letter-spacing: 0.4rem;
             text-align: center;
@@ -366,5 +375,14 @@ footer {
                 z-index: -1;
             }
         }
+    }
+}
+
+@keyframes reveal {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
