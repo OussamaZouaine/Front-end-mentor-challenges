@@ -12,6 +12,7 @@ header {
         padding: 1em;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         position: relative;
 
         .logo {
@@ -60,7 +61,6 @@ header {
         }
 
         .open-menu {
-            // display: none;
             transform: translateY(0);
             animation: reveal 1.5s ease-in-out alternate;
         }
@@ -121,7 +121,7 @@ main {
 
             p {
                 color: $dark-grayish-blue;
-                font-size: 1rem;
+                font-size: 0.9rem;
                 line-height: 1.6rem;
             }
 
@@ -158,7 +158,7 @@ main {
             background: url('../images/mobile/image-graphic-design.jpg');
             background-position: top;
             background-size: cover;
-            aspect-ratio: 1 / 1.5;
+            aspect-ratio: 1 / 1.4;
             color: $dark-desaturated-cyan;
         }
 
@@ -166,7 +166,7 @@ main {
             background: url('../images/mobile/image-photography.jpg');
             background-position: top;
             background-size: cover;
-            aspect-ratio: 1 / 1.5;
+            aspect-ratio: 1 / 1.4;
             color: $dark-blue;
         }
 
@@ -186,7 +186,7 @@ main {
             }
 
             p {
-                font-size: 1rem;
+                font-size: 0.9rem;
                 line-height: 1.6rem;
             }
         }
@@ -214,7 +214,7 @@ main {
 
     h1 {
         text-transform: uppercase;
-        font-size: clamp(1rem, 5vw, 3rem);
+        font-size: clamp(1rem, 4vw, 1.4rem);
         letter-spacing: 0.2rem;
         color: $grayish-blue;
     }
@@ -226,7 +226,7 @@ main {
         row-gap: 4em;
 
         .client {
-            flex: 1 1 300px;
+            flex: 1 1 250px;
             padding: 0 0.8em;
             display: flex;
             flex-direction: column;
@@ -240,6 +240,7 @@ main {
             }
 
             p {
+                font-size: 0.9rem;
                 line-height: 1.7rem;
             }
 
@@ -266,7 +267,6 @@ main {
 
 .gallery {
     width: 100%;
-    aspect-ratio: 1 / 1;
     margin-top: 1.5em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -274,28 +274,32 @@ main {
     .gallery1 {
         background: url('../images/mobile/image-gallery-milkbottles.jpg');
         background-size: cover;
+        aspect-ratio: 1 / 1;
     }
 
     .gallery2 {
         background: url('../images/mobile/image-gallery-orange.jpg');
         background-size: cover;
+        aspect-ratio: 1 / 1;
     }
 
     .gallery3 {
         background: url('../images/mobile/image-gallery-cone.jpg');
         background-size: cover;
+        aspect-ratio: 1 / 1;
     }
 
     .gallery4 {
         background: url('../images/mobile/image-gallery-sugar-cubes.jpg');
         background-size: cover;
+        aspect-ratio: 1 / 1;
     }
 }
 
 footer {
     background: $lighted-cyan;
     padding: 3em 1em;
-    height: 350px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -337,7 +341,7 @@ footer {
     }
 
     .social-media {
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         ul {
             column-gap: 1.5em;
 
@@ -352,6 +356,8 @@ footer {
     }
 
     .attribution {
+        position: absolute;
+        bottom: 5px;
         font-size: 0.7rem;
         text-align: center;
         color: $dark-desaturated-cyan;
@@ -386,3 +392,5 @@ footer {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
+
+@import 'media-query';

@@ -48,6 +48,10 @@ h3 {
   margin-top: 0.2em;
 }
 
+.btn:hover {
+  background-color: rgba(250, 212, 0, 0.5);
+}
+
 header {
   background: url("../images/mobile/image-header.jpg");
   background-size: cover;
@@ -65,6 +69,9 @@ header nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -203,7 +210,7 @@ main section .content h1 {
 
 main section .content p {
   color: #818498;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6rem;
 }
 
@@ -239,7 +246,7 @@ main section .graphic {
   background: url("../images/mobile/image-graphic-design.jpg");
   background-position: top;
   background-size: cover;
-  aspect-ratio: 1 / 1.5;
+  aspect-ratio: 1 / 1.4;
   color: #25564b;
 }
 
@@ -247,7 +254,7 @@ main section .photography {
   background: url("../images/mobile/image-photography.jpg");
   background-position: top;
   background-size: cover;
-  aspect-ratio: 1 / 1.5;
+  aspect-ratio: 1 / 1.4;
   color: #19536b;
 }
 
@@ -279,7 +286,7 @@ main section .photography h2 {
 
 main section .graphic p,
 main section .photography p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6rem;
 }
 
@@ -306,7 +313,7 @@ main section.stand-out a:hover::after {
 
 .testimonials h1 {
   text-transform: uppercase;
-  font-size: clamp(1rem, 5vw, 3rem);
+  font-size: clamp(1rem, 4vw, 1.4rem);
   letter-spacing: 0.2rem;
   color: #a7abae;
 }
@@ -326,8 +333,8 @@ main section.stand-out a:hover::after {
 
 .testimonials .clients .client {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 300px;
-          flex: 1 1 300px;
+      -ms-flex: 1 1 250px;
+          flex: 1 1 250px;
   padding: 0 0.8em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,6 +358,7 @@ main section.stand-out a:hover::after {
 }
 
 .testimonials .clients .client p {
+  font-size: 0.9rem;
   line-height: 1.7rem;
 }
 
@@ -374,7 +382,6 @@ main section.stand-out a:hover::after {
 
 .gallery {
   width: 100%;
-  aspect-ratio: 1 / 1;
   margin-top: 1.5em;
   display: -ms-grid;
   display: grid;
@@ -385,27 +392,33 @@ main section.stand-out a:hover::after {
 .gallery .gallery1 {
   background: url("../images/mobile/image-gallery-milkbottles.jpg");
   background-size: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .gallery .gallery2 {
   background: url("../images/mobile/image-gallery-orange.jpg");
   background-size: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .gallery .gallery3 {
   background: url("../images/mobile/image-gallery-cone.jpg");
   background-size: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .gallery .gallery4 {
   background: url("../images/mobile/image-gallery-sugar-cubes.jpg");
   background-size: cover;
+  aspect-ratio: 1 / 1;
 }
 
 footer {
   background: #74c8b4;
   padding: 3em 1em;
-  height: 350px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,7 +478,7 @@ footer nav ul li a:hover {
 }
 
 footer .social-media {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 footer .social-media ul {
@@ -478,6 +491,8 @@ footer .social-media ul li a:hover {
 }
 
 footer .attribution {
+  position: absolute;
+  bottom: 5px;
   font-size: 0.7rem;
   text-align: center;
   color: #25564b;
@@ -523,6 +538,245 @@ footer .attribution a::after {
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .btn {
+    background-color: white;
+  }
+  header {
+    background: url(../images/desktop/image-header.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 90vh;
+  }
+  header nav .nav {
+    position: initial;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    background: transparent;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    top: 0;
+    -webkit-column-gap: 1.5em;
+            column-gap: 1.5em;
+    row-gap: 0;
+    padding: 0;
+  }
+  header nav .nav li a {
+    color: white;
+  }
+  header nav .nav li a.btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  header nav .nav .triangle {
+    display: none;
+  }
+  header .menu {
+    display: none;
+  }
+  main section .img-transform,
+  main section .img-standout {
+    aspect-ratio: 1 / 0.6;
+  }
+  main section .content {
+    margin: 0 auto;
+    width: 70%;
+  }
+  main section .graphic,
+  main section .photography {
+    aspect-ratio: 1 / 1.5;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main section .graphic p,
+  main section .photography p {
+    width: 70%;
+    margin: 0 auto;
+  }
+  main .graphic-photography {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .graphic-photography .graphic {
+    width: 50%;
+    background: url("../images/desktop/image-graphic-design.jpg");
+    background-size: cover;
+    background-position: top;
+  }
+  main .graphic-photography .photography {
+    width: 50%;
+    background: url("../images/desktop/image-photography.jpg");
+    background-size: cover;
+    background-position: top;
+  }
+  .testimonials .clients .client p {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    height: 100vh;
+  }
+  header nav {
+    padding: 1em 3em;
+  }
+  header nav .nav {
+    -webkit-column-gap: 2.5em;
+            column-gap: 2.5em;
+  }
+  header .hero {
+    height: 70vh;
+  }
+  main section .graphic,
+  main section .photography {
+    aspect-ratio: 1 / 1;
+  }
+  main .transform,
+  main .stand-out {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .transform .img-transform,
+  main .stand-out .img-transform {
+    background: url("../images/desktop/image-transform.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    aspect-ratio: 1 / 1;
+  }
+  main .transform .img-standout,
+  main .stand-out .img-standout {
+    background: url("../images/desktop/image-stand-out.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    aspect-ratio: 1 / 1;
+  }
+  main .transform .content,
+  main .stand-out .content {
+    width: 50%;
+    margin: auto;
+    padding: 4em 3em;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+  main .reverse .img-transform {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  main .reverse .content {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .testimonials {
+    padding: 6em 2em;
+  }
+  .testimonials .clients {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 2em;
+            column-gap: 2em;
+  }
+  .testimonials .clients .client {
+    padding: 0;
+  }
+  .testimonials .clients .client img {
+    margin-bottom: 3em;
+  }
+  .testimonials .clients .client p {
+    width: 100%;
+  }
+  .testimonials .clients .client .comment {
+    margin-bottom: 3em;
+  }
+  .gallery {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery .gallery1 {
+    background: url("../images/desktop/image-gallery-milkbottles.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .gallery .gallery2 {
+    background: url("../images/desktop/image-gallery-orange.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .gallery .gallery3 {
+    background: url("../images/desktop/image-gallery-cone.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .gallery .gallery4 {
+    background: url("../images/desktop/image-gallery-sugarcubes.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  footer {
+    padding: 4em 1em;
+  }
+  footer nav {
+    row-gap: 2.5em;
+  }
+  footer nav ul {
+    -webkit-column-gap: 4em;
+            column-gap: 4em;
+  }
+  footer .social-media ul {
+    -webkit-column-gap: 2em;
+            column-gap: 2em;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  main section .graphic p,
+  main section .photography p {
+    width: 50%;
+  }
+  main .transform .content,
+  main .stand-out .content {
+    padding: 4em 6em;
+  }
+  .testimonials {
+    padding: 8em;
+  }
+  .testimonials .clients {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 4.9em;
+            column-gap: 4.9em;
+  }
+  .testimonials .clients .client {
+    padding: 0;
+  }
+  .testimonials .clients .client img {
+    margin-bottom: 3em;
+  }
+  .testimonials .clients .client p {
+    width: 100%;
+  }
+  .testimonials .clients .client .comment {
+    margin-bottom: 3em;
   }
 }
 /*# sourceMappingURL=style.css.map */

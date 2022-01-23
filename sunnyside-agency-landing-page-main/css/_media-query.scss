@@ -1,0 +1,274 @@
+@media only screen and (min-width: 768px) {
+    .btn {
+        background-color: $white;
+    }
+
+    header {
+        background: url(../images/desktop/image-header.jpg);
+        background-size: cover;
+        background-position: bottom;
+        height: 90vh;
+        nav {
+            .nav {
+                position: initial;
+                transform: translateY(0);
+                background: transparent;
+                flex-direction: row;
+                top: 0;
+                column-gap: 1.5em;
+                row-gap: 0;
+                padding: 0;
+
+                li {
+                    a {
+                        color: $white;
+                    }
+                    a.btn {
+                        &:hover {
+                            color: $white;
+                            background: rgba($white, 0.3);
+                        }
+                    }
+                }
+
+                .triangle {
+                    display: none;
+                }
+            }
+        }
+
+        .menu {
+            display: none;
+        }
+    }
+
+    main {
+        section {
+            .img-transform,
+            .img-standout {
+                aspect-ratio: 1 / 0.6;
+            }
+
+            .content {
+                margin: 0 auto;
+                width: 70%;
+            }
+
+            .graphic,
+            .photography {
+                aspect-ratio: 1 / 1.5;
+                object-fit: cover;
+
+                p {
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .graphic-photography {
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+
+            .graphic {
+                width: 50%;
+                background: url('../images/desktop/image-graphic-design.jpg');
+                background-size: cover;
+                background-position: top;
+            }
+
+            .photography {
+                width: 50%;
+                background: url('../images/desktop/image-photography.jpg');
+                background-size: cover;
+                background-position: top;
+            }
+        }
+    }
+
+    .testimonials {
+        .clients {
+            .client {
+                p {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        height: 100vh;
+        nav {
+            padding: 1em 3em;
+            .nav {
+                column-gap: 2.5em;
+            }
+        }
+
+        .hero {
+            height: 70vh;
+        }
+    }
+
+    main {
+        section {
+            .graphic,
+            .photography {
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+        .transform,
+        .stand-out {
+            display: flex;
+            .img-transform {
+                background: url('../images/desktop/image-transform.jpg');
+                background-size: cover;
+                background-position: center;
+                width: 50%;
+                aspect-ratio: 1 / 1;
+            }
+
+            .img-standout {
+                background: url('../images/desktop/image-stand-out.jpg');
+                background-size: cover;
+                background-position: center;
+                width: 50%;
+                aspect-ratio: 1 / 1;
+            }
+
+            .content {
+                width: 50%;
+                margin: auto;
+                padding: 4em 3em;
+                align-items: flex-start;
+                text-align: left;
+            }
+        }
+
+        .reverse {
+            .img-transform {
+                order: 2;
+            }
+
+            .content {
+                order: 1;
+            }
+        }
+    }
+
+    .testimonials {
+        padding: 6em 2em;
+        .clients {
+            flex-direction: row;
+            column-gap: 2em;
+
+            .client {
+                padding: 0;
+                img {
+                    margin-bottom: 3em;
+                }
+
+                p {
+                    width: 100%;
+                }
+
+                .comment {
+                    margin-bottom: 3em;
+                }
+            }
+        }
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+
+        .gallery1 {
+            background: url('../images/desktop/image-gallery-milkbottles.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery2 {
+            background: url('../images/desktop/image-gallery-orange.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery3 {
+            background: url('../images/desktop/image-gallery-cone.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery4 {
+            background: url('../images/desktop/image-gallery-sugarcubes.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    footer {
+        padding: 4em 1em;
+
+        nav {
+            row-gap: 2.5em;
+
+            ul {
+                column-gap: 4em;
+            }
+        }
+
+        .social-media {
+            ul {
+                column-gap: 2em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    main {
+        section {
+            .graphic,
+            .photography {
+                p {
+                    width: 50%;
+                }
+            }
+        }
+
+        .transform,
+        .stand-out {
+            .content {
+                padding: 4em 6em;
+            }
+        }
+    }
+
+    .testimonials {
+        padding: 8em;
+        .clients {
+            flex-direction: row;
+            column-gap: 4.9em;
+
+            .client {
+                padding: 0;
+                img {
+                    margin-bottom: 3em;
+                }
+
+                p {
+                    width: 100%;
+                }
+
+                .comment {
+                    margin-bottom: 3em;
+                }
+            }
+        }
+    }
+}

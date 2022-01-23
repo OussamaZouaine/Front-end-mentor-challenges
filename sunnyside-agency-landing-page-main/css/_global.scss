@@ -48,4 +48,8 @@ h3 {
     font-family: $fraunces;
     display: inline-block;
     margin-top: 0.2em;
+
+    &:hover {
+        background-color: rgba($yellow, 0.5);
+    }
 }
