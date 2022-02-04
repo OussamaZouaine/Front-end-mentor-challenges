@@ -6,7 +6,61 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
 body {
     font-family: $outfit;
     background-color: $light-gray;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+
+.card {
+    width: 320px;
+    height: 497px;
+    background-color: $white;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0px 10px 20px rgba(#000, 0.1);
+
+    img {
+        border-radius: calc(18px / 2);
+    }
+
+    h1,
+    p {
+        padding: 0 0.8rem;
+        text-align: center;
+    }
+
+    h1 {
+        color: $dark-blue;
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-top: 1.4rem;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 400;
+        color: $grayish-blue;
+        margin-top: 0.9rem;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
 }
