@@ -2,9 +2,7 @@ const dice = document.getElementById('dice');
 const id = document.getElementById('id');
 const quote = document.getElementById('quote');
 
-console.log(dice, id, quote);
-
-window.addEventListener('load', getAdvice());
+window.addEventListener('DOMContentLoaded', getAdvice());
 
 dice.addEventListener('click', () => {
     getAdvice();
@@ -18,5 +16,5 @@ async function getAdvice() {
 
 function showAdvice(data) {
     id.innerText = data.slip.id;
-    quote.innerText = data.slip.advice;
+    quote.innerText = `"${data.slip.advice}"`;
 }

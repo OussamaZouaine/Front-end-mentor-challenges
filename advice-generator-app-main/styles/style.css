@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #202632;
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 1em;
+}
+
+.quote-card {
+  position: relative;
+  max-width: 33.75em;
+  background-color: #313a49;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 2.5em;
+  padding: 3em;
+  border-radius: 0.625em;
+}
+
+.quote-card p {
+  color: #52ffa8;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 0.875rem;
+}
+
+.quote-card h1 {
+  font-size: 1.75rem;
+  color: #cee3e9;
+}
+
+.quote-card .divider {
+  position: relative;
+  width: 100%;
+  height: 1em;
+  background: url("../images/pattern-divider-desktop.svg");
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 1.5em;
+}
+
+.quote-card .btn {
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  padding: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  background-color: #52ffa8;
+  cursor: pointer;
+}
+
+.quote-card .btn:hover {
+  -webkit-box-shadow: 0 0 20px 10px rgba(82, 255, 168, 0.3);
+          box-shadow: 0 0 20px 10px rgba(82, 255, 168, 0.3);
+}
+
+@media only screen and (max-width: 540px) {
+  .quote-card {
+    row-gap: 1.5em;
+    padding: 2em 1.5em;
+  }
+  .quote-card .divider {
+    background: url("../images/pattern-divider-mobile.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 2em;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0.5em;
+  font-size: 11px;
+  text-align: center;
+  color: #cee3e9;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */
