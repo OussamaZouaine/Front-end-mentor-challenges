@@ -9,12 +9,12 @@ dice.addEventListener('click', () => {
 });
 
 async function getAdvice() {
-    let response = await axios.get('	https://api.adviceslip.com/advice');
+    let response = await axios.get('https://api.adviceslip.com/advice');
 
     showAdvice(response.data);
 }
 
 function showAdvice(data) {
     id.innerText = data.slip.id;
-    quote.innerText = `"${data.slip.advice}"`;
+    quote.innerText = data.slip.advice;
 }
