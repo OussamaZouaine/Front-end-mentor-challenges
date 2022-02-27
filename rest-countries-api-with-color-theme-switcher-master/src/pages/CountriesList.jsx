@@ -1,5 +1,6 @@
 import SearchIcon from '@heroicons/react/outline/SearchIcon';
 import { useState, useEffect, useContext } from 'react';
+import HashLoader from 'react-spinners/HashLoader';
 import CountryCard from '../components/CountryCard';
 import { CountriesContext } from '../context/CountriesProvider';
 
@@ -7,7 +8,7 @@ function CountriesList() {
     const [searchTerm, setSearchTerm] = useState('');
     const [region, SetRegion] = useState('');
 
-    const { countries, setCountries, fetchCountries } =
+    const { countries, setCountries, isLoading, fetchCountries } =
         useContext(CountriesContext);
 
     useEffect(() => {
@@ -39,17 +40,23 @@ function CountriesList() {
                         />
                     </form>
                 </section>
-                <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-16">
-                    {countries
-                        .filter((el) => {
-                            return el.name
-                                .toLowerCase()
-                                .includes(searchTerm.toLowerCase());
-                        })
-                        .map((country, index) => (
-                            <CountryCard key={index} country={country} />
-                        ))}
-                </section>
+                {isLoading ? (
+                    <div className="flex justify-center items-center w-full min-h-full">
+                        <HashLoader color="silver" />
+                    </div>
+                ) : (
+                    <section className="cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16">
+                        {countries
+                            .filter((el) => {
+                                return el.name
+                                    .toLowerCase()
+                                    .includes(searchTerm.toLowerCase());
+                            })
+                            .map((country, index) => (
+                                <CountryCard key={index} country={country} />
+                            ))}
+                    </section>
+                )}
             </div>
         </main>
     );

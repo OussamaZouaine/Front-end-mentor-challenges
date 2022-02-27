@@ -8,11 +8,13 @@ const BASE_URL = 'https://restcountries.com/v2/';
 export const CountriesContext = createContext();
 
 function CountriesProvider({ children }) {
-    const [countries, setCountries] = useState(initialData);
+    const [countries, setCountries] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    console.log(countries);
+    // console.log(countries);
 
     const fetchCountries = async (country = '', region = '') => {
+        setIsLoading(true);
         let url = '';
         let response;
         if (country) {
@@ -28,13 +30,14 @@ function CountriesProvider({ children }) {
         } else {
             response = await axios.get(`${BASE_URL}all`);
         }
-        localStorage.setItem('countries', JSON.stringify(response.data));
+        // localStorage.setItem('countries', JSON.stringify(response.data));
         setCountries(response.data);
+        setIsLoading(false);
     };
 
     return (
         <CountriesContext.Provider
-            value={{ countries, setCountries, fetchCountries }}
+            value={{ countries, setCountries, isLoading, fetchCountries }}
         >
             {children}
         </CountriesContext.Provider>

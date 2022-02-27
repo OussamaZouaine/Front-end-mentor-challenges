@@ -1,12 +1,12 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import HashLoader from 'react-spinners/HashLoader';
 import { CountriesContext } from '../context/CountriesProvider';
 import ArrowLeftIcon from '@heroicons/react/outline/ArrowLeftIcon';
 
 function Country() {
-    // const [country, setCountry] = useState([]);
     const { name } = useParams();
-    const { countries, setCountries, fetchCountries } =
+    const { countries, setCountries, isLoading, fetchCountries } =
         useContext(CountriesContext);
 
     useEffect(() => {
@@ -22,9 +22,106 @@ function Country() {
                 >
                     <ArrowLeftIcon className="w-5 h-5" /> Back
                 </Link>
-                {countries.length === 0 ? name : countries[0].name ?? 'hello'}
+                {isLoading ? (
+                    <div className="flex justify-center items-center w-full min-h-full">
+                        <HashLoader color="silver" />
+                    </div>
+                ) : (
+                    <section className="grid md:grid-cols-2 gap-12">
+                        <img
+                            src={countries[0].flags.svg}
+                            alt=""
+                            className="w-full"
+                        />
+                        <div className="flex flex-col justify-center gap-6">
+                            <h1 className="text-2xl font-bold">
+                                {countries[0].name}
+                            </h1>
+                            <div className="country-info text-sm flex flex-col md:flex-row gap-4 justify-between leading-6">
+                                <div>
+                                    <p>
+                                        <span className="font-semibold">
+                                            Native Name:
+                                        </span>{' '}
+                                        {countries[0].nativeName}
+                                    </p>
+                                    <p>
+                                        <span className="font-semibold">
+                                            Population:
+                                        </span>{' '}
+                                        {countries[0].population.toLocaleString()}
+                                    </p>
+                                    <p>
+                                        <span className="font-semibold">
+                                            Region:
+                                        </span>{' '}
+                                        {countries[0].region}
+                                    </p>
+                                    <p>
+                                        <span className="font-semibold">
+                                            Sub Region:
+                                        </span>{' '}
+                                        {countries[0].subregion}
+                                    </p>
+                                    <p>
+                                        <span className="font-semibold">
+                                            Capital:
+                                        </span>{' '}
+                                        {countries[0].capital}
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span className="font-semibold">
+                                            Top Level Domain:
+                                        </span>{' '}
+                                        {countries[0].topLevelDomain[0]}
+                                    </p>
+                                    <p>
+                                        <span className="font-semibold">
+                                            Currencies:
+                                        </span>{' '}
+                                        {countries[0].currencies
+                                            ? countries[0].currencies[0].name
+                                            : ' '}
+                                    </p>
+                                    <p>
+                                        <span className="font-semibold">
+                                            Languages:
+                                        </span>{' '}
+                                        {countries[0].languages.map(
+                                            (language, index) =>
+                                                index <
+                                                countries[0].languages.length -
+                                                    1
+                                                    ? language.name + ', '
+                                                    : language.name
+                                        )}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p className="text-sm space-y-2 md:space-x-2">
+                                <span className="font-semibold block md:inline">
+                                    Borders:{' '}
+                                </span>
+                                {countries[0].borders
+                                    ? countries[0].borders.map(
+                                          (border, index) => (
+                                              <button
+                                                  key={index}
+                                                  className="text-dark-gray bg-white font-semibold text-xs rounded-sm shadow-md py-1 px-4 mr-2 lowercase"
+                                              >
+                                                  {border}
+                                              </button>
+                                          )
+                                      )
+                                    : ' '}
+                            </p>
+                        </div>
+                    </section>
+                )}
             </div>
-            <img src={countries[0].flags.svg} alt="" />
         </main>
     );
 }
