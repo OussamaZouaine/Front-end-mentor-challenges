@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function CountryCard({ country }) {
     return (
-        <div className="card flex flex-col bg-white shadow-md rounded-md overflow-hidden">
+        <div className="card flex flex-col bg-white dark:bg-dark-blue shadow-md rounded-md overflow-hidden">
             <Link to={`/${country.name}`} className="h-full">
                 <img
                     src={country.flags.svg}

@@ -20,12 +20,12 @@ function CountriesList() {
     };
 
     return (
-        <main className="bg-very-light-gray min-h-[89vh]">
+        <main className="bg-transparent min-h-[89vh]">
             <div className="w-full max-w-7xl mx-auto flex flex-wrap flex-col p-4">
                 <section className="mb-10">
                     <form
                         onSubmit={handleSubmit}
-                        className="w-1/3 flex items-center py-4 px-6 rounded-md shadow-md gap-4 text-dark-gray bg-white"
+                        className="w-1/3 flex items-center py-4 px-6 rounded-md shadow-md gap-4 text-dark-gray dark:text-white bg-white dark:bg-dark-blue"
                     >
                         <label htmlFor="country">
                             <SearchIcon className="w-5 h-5" />

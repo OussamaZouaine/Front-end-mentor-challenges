@@ -1,8 +1,6 @@
 import axios from 'axios';
 import { useState, createContext } from 'react';
 
-const initialData = JSON.parse(localStorage.getItem('countries'));
-
 const BASE_URL = 'https://restcountries.com/v2/';
 
 export const CountriesContext = createContext();

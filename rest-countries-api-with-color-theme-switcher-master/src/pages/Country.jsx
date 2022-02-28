@@ -14,11 +14,11 @@ function Country() {
     }, []);
 
     return (
-        <main className="bg-very-light-gray min-h-[89vh]">
+        <main className="bg-transparent min-h-[89vh]">
             <div className="w-full max-w-7xl mx-auto flex flex-wrap flex-col p-4">
                 <Link
                     to={'/'}
-                    className="w-fit flex items-center mb-10 py-2 px-6 rounded-md shadow-md gap-2 text-dark-gray bg-white font-semibold"
+                    className="w-fit flex items-center mb-10 py-2 px-6 rounded-md shadow-md gap-2 text-dark-gray dark:text-white bg-white dark:bg-dark-blue font-semibold"
                 >
                     <ArrowLeftIcon className="w-5 h-5" /> Back
                 </Link>
@@ -31,7 +31,7 @@ function Country() {
                         <img
                             src={countries[0].flags.svg}
                             alt=""
-                            className="w-full"
+                            className="w-full shadow-md"
                         />
                         <div className="flex flex-col justify-center gap-6">
                             <h1 className="text-2xl font-bold">
@@ -110,7 +110,7 @@ function Country() {
                                           (border, index) => (
                                               <button
                                                   key={index}
-                                                  className="text-dark-gray bg-white font-semibold text-xs rounded-sm shadow-md py-1 px-4 mr-2 lowercase"
+                                                  className="text-dark-gray dark:text-white bg-white dark:bg-dark-blue font-semibold text-xs rounded-sm shadow-md py-1 px-4 mr-2 lowercase"
                                               >
                                                   {border}
                                               </button>
