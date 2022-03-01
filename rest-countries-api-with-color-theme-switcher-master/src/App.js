@@ -6,13 +6,13 @@ import CountriesList from './pages/CountriesList';
 import Country from './pages/Country';
 
 function App() {
-    const { darkTheme, setDarkTheme } = useContext(ThemeContext);
+    const { darkTheme } = useContext(ThemeContext);
     return (
-        <div
+        <main
             className={
                 darkTheme
-                    ? 'dark bg-very-dark-blue font-nunito text-white flex flex-col gap-1'
-                    : 'bg-very-light-gray font-nunito text-darker-blue flex flex-col gap-1'
+                    ? 'dark bg-very-dark-blue font-nunito text-white flex flex-col '
+                    : 'bg-very-light-gray font-nunito text-darker-blue flex flex-col '
             }
         >
             <Router>
@@ -22,7 +22,7 @@ function App() {
                     <Route path="/:name" element={<Country />} />
                 </Routes>
             </Router>
-        </div>
+        </main>
     );
 }
 

@@ -2,17 +2,21 @@ import SearchIcon from '@heroicons/react/outline/SearchIcon';
 import { useState, useEffect, useContext } from 'react';
 import HashLoader from 'react-spinners/HashLoader';
 import CountryCard from '../components/CountryCard';
+import Dropdown from '../components/Dropdown';
 import { CountriesContext } from '../context/CountriesProvider';
 
 function CountriesList() {
     const [searchTerm, setSearchTerm] = useState('');
-    const [region, SetRegion] = useState('');
+    const [filteredRegion, setFilteredRegion] = useState('');
 
-    const { countries, setCountries, isLoading, fetchCountries } =
+    const { countries, isLoading, fetchCountries } =
         useContext(CountriesContext);
+
+    // console.log(filteredRegion);
 
     useEffect(() => {
         fetchCountries();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleSubmit = (e) => {
@@ -20,12 +24,12 @@ function CountriesList() {
     };
 
     return (
-        <main className="bg-transparent min-h-[89vh]">
+        <main className="bg-transparent min-h-[90vh] pt-4">
             <div className="w-full max-w-7xl mx-auto flex flex-wrap flex-col p-4">
-                <section className="mb-10">
+                <section className="mb-10 md:mb-16 flex justify-between items-center flex-wrap gap-y-4">
                     <form
                         onSubmit={handleSubmit}
-                        className="w-1/3 flex items-center py-4 px-6 rounded-md shadow-md gap-4 text-dark-gray dark:text-white bg-white dark:bg-dark-blue"
+                        className="w-full sm:w-2/4 md:w-2/5 flex items-center py-4 px-6 rounded-md shadow-md gap-4 text-dark-gray dark:text-white bg-white dark:bg-dark-blue"
                     >
                         <label htmlFor="country">
                             <SearchIcon className="w-5 h-5" />
@@ -39,6 +43,8 @@ function CountriesList() {
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
                     </form>
+
+                    <Dropdown region={setFilteredRegion} />
                 </section>
                 {isLoading ? (
                     <div className="flex justify-center items-center w-full min-h-full">
@@ -47,11 +53,16 @@ function CountriesList() {
                 ) : (
                     <section className="cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16">
                         {countries
-                            .filter((el) => {
-                                return el.name
+                            .filter((country) =>
+                                country.region
                                     .toLowerCase()
-                                    .includes(searchTerm.toLowerCase());
-                            })
+                                    .includes(filteredRegion.toLowerCase())
+                            )
+                            .filter((country) =>
+                                country.name
+                                    .toLowerCase()
+                                    .includes(searchTerm.toLowerCase())
+                            )
                             .map((country, index) => (
                                 <CountryCard key={index} country={country} />
                             ))}

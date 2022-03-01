@@ -6,19 +6,20 @@ import ArrowLeftIcon from '@heroicons/react/outline/ArrowLeftIcon';
 
 function Country() {
     const { name } = useParams();
-    const { countries, setCountries, isLoading, fetchCountries } =
+    const { countries, isLoading, fetchCountries } =
         useContext(CountriesContext);
 
     useEffect(() => {
         fetchCountries(name);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
-        <main className="bg-transparent min-h-[89vh]">
+        <main className="bg-transparent min-h-[90vh] py-6">
             <div className="w-full max-w-7xl mx-auto flex flex-wrap flex-col p-4">
                 <Link
                     to={'/'}
-                    className="w-fit flex items-center mb-10 py-2 px-6 rounded-md shadow-md gap-2 text-dark-gray dark:text-white bg-white dark:bg-dark-blue font-semibold"
+                    className="w-fit flex items-center mb-16 py-2 px-6 rounded-md shadow-md gap-2 text-dark-gray dark:text-white bg-white dark:bg-dark-blue font-semibold"
                 >
                     <ArrowLeftIcon className="w-5 h-5" /> Back
                 </Link>
@@ -34,10 +35,10 @@ function Country() {
                             className="w-full shadow-md"
                         />
                         <div className="flex flex-col justify-center gap-6">
-                            <h1 className="text-2xl font-bold">
+                            <h1 className="text-2xl font-bold mb-3">
                                 {countries[0].name}
                             </h1>
-                            <div className="country-info text-sm flex flex-col md:flex-row gap-4 justify-between leading-6">
+                            <div className="country-info text-sm flex flex-col md:flex-row gap-y-8 justify-between leading-6">
                                 <div>
                                     <p>
                                         <span className="font-semibold">
