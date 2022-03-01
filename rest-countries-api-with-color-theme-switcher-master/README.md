@@ -11,4 +11,4 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 ### Links
 
 -   Solution URL: [Solution file](https://github.com/OussamaZouaine/Front-end-mentor-challenges/tree/main/rest-countries-api-with-color-theme-switcher-master)
--   Live Site URL: [The live site](https://oussamazouaine.github.io/Front-end-mentor-challenges/profile-card-component/index.html)
+-   Live Site URL: [The live site](https://rest-countries-fem.netlify.app/)
