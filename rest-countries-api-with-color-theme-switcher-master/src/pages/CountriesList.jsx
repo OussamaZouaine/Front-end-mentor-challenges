@@ -12,8 +12,6 @@ function CountriesList() {
     const { countries, isLoading, fetchCountries } =
         useContext(CountriesContext);
 
-    // console.log(filteredRegion);
-
     useEffect(() => {
         fetchCountries();
         // eslint-disable-next-line react-hooks/exhaustive-deps

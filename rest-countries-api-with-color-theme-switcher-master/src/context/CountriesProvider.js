@@ -9,9 +9,7 @@ function CountriesProvider({ children }) {
     const [countries, setCountries] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    // console.log(countries);
-
-    const fetchCountries = async (country = '', region = '') => {
+    const fetchCountries = async (country = '') => {
         setIsLoading(true);
         let url = '';
         let response;
@@ -19,16 +17,12 @@ function CountriesProvider({ children }) {
             url = `${BASE_URL}name/${country}?fullText=true`;
         }
 
-        if (region) {
-            url = `${BASE_URL}continent/${region}`;
-        }
-
         if (url !== '') {
             response = await axios.get(url);
         } else {
             response = await axios.get(`${BASE_URL}all`);
         }
-        // localStorage.setItem('countries', JSON.stringify(response.data));
+
         setCountries(response.data);
         setIsLoading(false);
     };

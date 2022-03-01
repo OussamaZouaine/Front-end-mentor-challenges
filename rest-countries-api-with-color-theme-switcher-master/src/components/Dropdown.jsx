@@ -5,7 +5,6 @@ function Dropdown({ region }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const filterByRegion = (e) => {
-        // console.log(e.target.innerText);
         region(e.target.innerText);
         setIsOpen(!isOpen);
     };
