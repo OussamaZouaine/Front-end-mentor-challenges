@@ -1,12 +1,135 @@
+:root {
+  font-size: 18px;
+}
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   width: 100%;
   min-height: 100vh;
+  color: #00252e;
+  font-family: "Open Sans", sans-serif;
 }
-/*# sourceMappingURL=styles.css.map */
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1250px) {
+  .container {
+    padding: 0 1em;
+  }
+}
+
+.btn {
+  background-color: white;
+  padding: 0.8em 3em;
+  border-radius: 999px;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: #00252e;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #ff52bf;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: rgba(255, 82, 191, 0.7);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  background: url("../images/bg-hero-desktop.svg");
+  background-color: #ebfbff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 0 1em;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+}
+header nav img {
+  width: 200px;
+}
+header nav a {
+  font-size: 0.8rem;
+}
+header nav a:hover {
+  color: #808d99;
+}
+header .hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+}
+header .hero > * {
+  flex: 1 1 50%;
+}
+header .hero .hero-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+header .hero .hero-text h1 {
+  width: 80%;
+  font-size: 2rem;
+  line-height: 1.4em;
+  font-weight: bold;
+}
+header .hero .hero-text p {
+  width: 80%;
+  font-size: 0.9rem;
+}
+header .hero .hero-text a {
+  font-size: 0.9rem;
+}
+@media only screen and (max-width: 765px) {
+  header nav img {
+    width: 150px;
+  }
+  header .hero {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
+  }
+  header .hero .hero-text {
+    text-align: center;
+    align-items: center;
+    row-gap: 1.5em;
+  }
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+}
+footer a {
+  color: #3e52a3;
+}/*# sourceMappingURL=styles.css.map */

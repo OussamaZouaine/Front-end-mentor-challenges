@@ -1,5 +1,9 @@
 @import 'variables';
 
+:root {
+    font-size: 18px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,4 +13,138 @@
 body {
     width: 100%;
     min-height: 100vh;
+    color: $very-dark-cyan;
+    font-family: $open-sans;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    @media only screen and (max-width: 1250px) {
+        padding: 0 1em;
+    }
+}
+
+.btn {
+    background-color: white;
+    padding: 0.8em 3em;
+    border-radius: 999px;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.2);
+    text-decoration: none;
+    color: $very-dark-cyan;
+    width: fit-content;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn-primary {
+    background-color: $pink;
+    color: white;
+
+    &:hover {
+        background-color: rgba($pink, $alpha: 0.7);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $poppins;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    background: url('../images/bg-hero-desktop.svg');
+    background-color: $very-pale-cyan;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 0 1em;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 15vh;
+
+        img {
+            width: 200px;
+        }
+
+        a {
+            font-size: 0.8rem;
+
+            &:hover {
+                color: $grayish-blue;
+            }
+        }
+    }
+
+    .hero {
+        height: 85vh;
+        display: flex;
+        align-items: center;
+
+        & > * {
+            flex: 1 1 50%;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2em;
+
+            h1 {
+                width: 80%;
+                font-size: 2rem;
+                line-height: 1.4em;
+                font-weight: bold;
+            }
+
+            p {
+                width: 80%;
+                font-size: 0.9rem;
+            }
+
+            a {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 765px) {
+        nav {
+            img {
+                width: 150px;
+            }
+        }
+
+        .hero {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 2em;
+
+            .hero-text {
+                text-align: center;
+                align-items: center;
+                row-gap: 1.5em;
+            }
+        }
+    }
+}
+
+footer {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
 }
