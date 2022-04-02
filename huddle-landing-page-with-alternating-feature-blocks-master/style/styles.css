@@ -57,7 +57,7 @@ h6 {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 header {
@@ -123,6 +123,62 @@ header .hero .hero-text a {
     text-align: center;
     align-items: center;
     row-gap: 1.5em;
+  }
+}
+
+main {
+  padding: 8em 0;
+}
+main section {
+  height: 18em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2em;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+}
+main section img {
+  width: 18em;
+}
+main section .section-text {
+  width: 35%;
+}
+main section .section-text h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6em;
+}
+main section .section-text p {
+  color: #808d99;
+  font-size: 0.8em;
+  line-height: 1.2rem;
+}
+main section.reverse img {
+  order: 2;
+}
+@media only screen and (max-width: 765px) {
+  main section {
+    flex-direction: column;
+    height: auto;
+  }
+  main section img {
+    margin-bottom: 3em;
+  }
+  main section .section-text {
+    width: 80%;
+    text-align: center;
+  }
+  main section.reverse img {
+    order: initial;
+  }
+}
+@media only screen and (max-width: 450px) {
+  main section img {
+    width: 100%;
+  }
+  main section .section-text {
+    width: 100%;
   }
 }
 
