@@ -11,7 +11,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  color: #00252e;
+  color: hsl(192deg, 100%, 9%);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -32,16 +32,14 @@ body {
   font-weight: bold;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   text-decoration: none;
-  color: #00252e;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  color: hsl(192deg, 100%, 9%);
   transition: all 0.1s ease-in-out;
 }
 
 .btn-primary {
-  background-color: #ff52bf;
+  background-color: hsl(322deg, 100%, 66%);
   color: white;
+  font-size: 0.9rem;
 }
 .btn-primary:hover {
   background-color: rgba(255, 82, 191, 0.7);
@@ -62,7 +60,7 @@ img {
 
 header {
   background: url("../images/bg-hero-desktop.svg");
-  background-color: #ebfbff;
+  background-color: hsl(193deg, 100%, 96%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,7 +80,7 @@ header nav a {
   font-size: 0.8rem;
 }
 header nav a:hover {
-  color: #808d99;
+  color: hsl(208deg, 11%, 55%);
 }
 header .hero {
   height: 85vh;
@@ -107,9 +105,6 @@ header .hero .hero-text p {
   width: 80%;
   font-size: 0.9rem;
 }
-header .hero .hero-text a {
-  font-size: 0.9rem;
-}
 @media only screen and (max-width: 765px) {
   header nav img {
     width: 150px;
@@ -123,6 +118,19 @@ header .hero .hero-text a {
     text-align: center;
     align-items: center;
     row-gap: 1.5em;
+  }
+}
+@media only screen and (max-width: 450px) {
+  header nav img {
+    width: 100px;
+  }
+  header nav .btn {
+    font-size: 0.7rem;
+    padding: 0.6em 2.5em;
+  }
+  header .hero .hero-text .btn-primary {
+    font-size: 0.7rem;
+    padding: 0.8em 3.5em;
   }
 }
 
@@ -150,7 +158,7 @@ main section .section-text h1 {
   margin-bottom: 0.6em;
 }
 main section .section-text p {
-  color: #808d99;
+  color: hsl(208deg, 11%, 55%);
   font-size: 0.8em;
   line-height: 1.2rem;
 }
@@ -182,10 +190,57 @@ main section.reverse img {
   }
 }
 
+.community {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2em 6em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+}
+.community h1 {
+  margin-top: 0.8em;
+  margin-bottom: 1em;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 650px) {
+  .community {
+    padding: 2em 4em;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .community {
+    padding: 2em;
+    margin: 0 auto;
+  }
+  .community h1 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .community {
+    margin: 0 1em;
+    padding: 2em 1.7em;
+  }
+  .community h1 {
+    font-size: 0.9rem;
+  }
+  .community .btn-primary {
+    font-size: 0.7rem;
+  }
+}
+
 footer {
   font-size: 11px;
   text-align: center;
 }
 footer a {
-  color: #3e52a3;
+  color: hsl(228deg, 45%, 44%);
 }/*# sourceMappingURL=styles.css.map */
