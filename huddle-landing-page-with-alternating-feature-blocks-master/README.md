@@ -13,9 +13,9 @@ Users should be able to:
 
 ### Screenshot
 
-| Desktop                                   | Mobile                                               |
-| ----------------------------------------- | ---------------------------------------------------- |
-| ![](./screenshot/huddle-landing-page.png) | ![](./screenshot/huddle-landing-page-mobile.png.png) |
+| Desktop                                   | Mobile                                           |
+| ----------------------------------------- | ------------------------------------------------ |
+| ![](./screenshot/huddle-landing-page.png) | ![](./screenshot/huddle-landing-page-mobile.png) |
 
 ### Links
 
