@@ -113,6 +113,10 @@ header {
                 width: 80%;
                 font-size: 0.9rem;
             }
+
+            .btn {
+                width: fit-content;
+            }
         }
     }
 
@@ -137,6 +141,12 @@ header {
     }
 
     @media only screen and (max-width: 450px) {
+        background: url('../images/bg-hero-mobile.svg');
+        background-color: $very-pale-cyan;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
         nav {
             img {
                 width: 100px;
@@ -160,7 +170,7 @@ header {
 }
 
 main {
-    padding: 8em 0;
+    padding: 8em 0 2em 0;
     
     section {
         height: 18em;
@@ -243,6 +253,10 @@ main {
     padding: 2em 6em;
     border-radius: .5em;
     box-shadow: 0 0 10px 1px rgba(#000000, 0.15);
+    position: relative;
+    transform: translateY(35%);
+    background-color: #ffff;
+    z-index: 50;
 
     h1 {
         margin-top: .8em;
@@ -279,10 +293,161 @@ main {
 }
 
 footer {
-    font-size: 11px;
-    text-align: center;
+    
+    position: relative;
+    background-color: $very-dark-cyan;
+    color: $very-pale-cyan;
+    padding: 8em 0 4em 0;
 
-    a {
-        color: hsl(228, 45%, 44%);
+    p {
+        font-size: .8rem;
     }
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 2em;
+
+        & > * {
+            width: 33.33%;
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 2em;
+        }
+
+        .contact {
+             img {
+                 width: 12px;
+                 height: 12px;
+                 margin-top: .35em;
+             }
+
+
+             .location, .phone, .email {
+                 display: flex;
+                 gap: 1em;
+                 margin-bottom: 1em;
+             }
+
+             .location {
+                img {
+                    height: 14px;
+                }
+
+                 p {
+                     width: 20em;
+                     line-height: 1.6rem;
+                 }
+             }
+        }
+
+        .menu {
+            display: flex;
+            // flex-wrap: wrap;
+            column-gap: 6em;
+            row-gap: 1.5em;
+            padding: 0 4em;
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                row-gap: 1em;
+                font-size: .8rem;
+                
+                li {
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .social {
+            padding: 0 6em;
+            display: flex;
+            align-items: flex-start;
+            column-gap: 1em;
+            i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 35px;
+                font-size: .8rem;
+                border: 1px solid $very-pale-cyan;
+                padding: 5px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    color: $pink;
+                    border: 1px solid $pink;
+                }
+            }
+        }
+    }
+    
+    .attribution {
+        position: absolute;
+        bottom: 1em;
+        right: 0px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        p {
+            font-size: .6rem;
+
+            a {
+                color: hsl(228, 45%, 44%);
+            }
+        }
+
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .container {
+            & > * {
+                width: auto;
+            }
+
+            
+
+            .social {
+                justify-content: center;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 760px) {
+        .container {
+            flex-direction: column;
+
+            .menu {
+                padding: 0;
+            }
+
+            .social {
+                padding: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .container {
+            .menu {
+                flex-direction: column;
+            }
+        }
+    }
+
 }
