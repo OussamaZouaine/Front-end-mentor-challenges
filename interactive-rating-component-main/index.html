@@ -24,24 +24,16 @@
         <link rel="stylesheet" href="./css/main.css" />
 
         <title>Frontend Mentor | Interactive rating component</title>
-
-        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-        <style>
-            .attribution {
-                font-size: 11px;
-                text-align: center;
-            }
-            .attribution a {
-                color: hsl(228, 45%, 44%);
-            }
-        </style>
     </head>
     <body
-        class="font-overpass min-h-screen w-screen bg-veryDarkBlue text-white grid place-content-center"
+        class="relative font-overpass min-h-screen w-screen bg-veryDarkBlue text-white grid place-content-center"
     >
         <!-- Rating state start -->
 
-        <section id="rating" class="w-80 p-6 rounded-2xl space-y-4">
+        <section
+            id="rating"
+            class="w-80 bg-darkBlue p-6 rounded-2xl space-y-4 md:w-96 md:space-y-6 md:p-8"
+        >
             <div class="w-fit bg-lightGray/10 p-3 rounded-full">
                 <img src="./images/icon-star.svg" alt="star icon" class="w-3" />
             </div>
@@ -53,7 +45,7 @@
                 feedback is appreciated to help us improve our offering!
             </p>
 
-            <div class="flex gap-4">
+            <div class="flex justify-between">
                 <button
                     class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
                 >
@@ -92,20 +84,52 @@
 
         <!-- Thank you state start -->
 
-        <!-- You selected
-        <!-- Add rating here -->
-        <!-- out of 5 Thank you! We appreciate you taking the time to give a rating.
-        If you ever need more support, don’t hesitate to get in touch!  -->
+        <section
+            id="thankyou"
+            class="w-80 bg-darkBlue flex flex-col items-center p-6 rounded-2xl space-y-4 md:w-96 md:space-y-6 md:p-8"
+        >
+            <img
+                src="./images/illustration-thank-you.svg"
+                alt="thank you illustration"
+            />
+
+            <!-- Add rating here -->
+            <p
+                class="text-orange text-sm flex justify-center items-center bg-lightGray/10 py-2 px-4 rounded-full"
+            >
+                You selected
+                <span class="rating inline-block mx-1">4</span> out of 5
+            </p>
+
+            <h1 class="text-2xl font-bold">Thank You!</h1>
+
+            <p class="text-center text-sm text-mediumGray">
+                We appreciate you taking the time to give a rating. If you ever
+                need more support, don’t hesitate to get in touch!
+            </p>
+        </section>
 
         <!-- Thank you state end -->
 
-        <footer class="attribution">
-            Challenge by
-            <a
-                href="https://www.frontendmentor.io?ref=challenge"
-                target="_blank"
-                >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
+        <footer class="absolute bottom-2 place-self-center">
+            <p class="text-xs font-thin">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    class="text-orange underline decoration-orange"
+                    >Frontend Mentor</a
+                >
+                . Coded by
+                <a
+                    href="https://github.com/OussamaZouaine"
+                    target="_blank"
+                    class="text-orange underline decoration-orange"
+                >
+                    ZOUAINE Oussama
+                </a>
+                .
+            </p>
         </footer>
     </body>
 </html>
