@@ -17,6 +17,7 @@ submit.addEventListener('click', () => {
         ratingText.innerText = rating;
         ratingSection.classList.add('hidden');
         thankyouSection.classList.remove('hidden');
+        thankyouSection.classList.add('flex');
     } else {
         alert('Please add a rating');
     }
