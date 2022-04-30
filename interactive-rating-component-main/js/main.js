@@ -1,6 +1,6 @@
 const ratingSection = document.querySelector('#rating');
 const thankyouSection = document.querySelector('#thankyou');
-const ratingBtns = document.querySelectorAll('#rating-btn');
+const ratingBtns = document.querySelectorAll('.rating-btn');
 const ratingText = document.querySelector('.rating-text');
 const submit = document.querySelector('#submit');
 

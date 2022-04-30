@@ -28,94 +28,85 @@
     <body
         class="relative font-overpass min-h-screen w-screen bg-veryDarkBlue text-white grid place-content-center"
     >
-        <!-- Rating state start -->
-
-        <section
-            id="rating"
-            class="w-80 bg-darkBlue p-6 rounded-2xl space-y-4 md:w-96 md:space-y-6 md:p-8"
-        >
-            <div class="w-fit bg-lightGray/10 p-3 rounded-full">
-                <img src="./images/icon-star.svg" alt="star icon" class="w-3" />
-            </div>
-
-            <h1 class="text-2xl font-bold">How did we do?</h1>
-
-            <p class="text-sm text-mediumGray">
-                Please let us know how we did with your support request. All
-                feedback is appreciated to help us improve our offering!
-            </p>
-
-            <div class="flex justify-between">
+        <main>
+            <!-- Rating state start -->
+            <section
+                id="rating"
+                class="w-80 bg-darkBlue p-6 rounded-2xl space-y-4 md:w-96 md:space-y-6 md:p-8"
+            >
+                <div class="w-fit bg-lightGray/10 p-3 rounded-full">
+                    <img
+                        src="./images/icon-star.svg"
+                        alt="star icon"
+                        class="w-3"
+                    />
+                </div>
+                <h1 class="text-2xl font-bold">How did we do?</h1>
+                <p class="text-sm text-mediumGray">
+                    Please let us know how we did with your support request. All
+                    feedback is appreciated to help us improve our offering!
+                </p>
+                <div class="flex justify-between">
+                    <button
+                        class="rating-btn w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
+                    >
+                        1
+                    </button>
+                    <button
+                        class="rating-btn w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
+                    >
+                        2
+                    </button>
+                    <button
+                        class="rating-btn w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
+                    >
+                        3
+                    </button>
+                    <button
+                        class="rating-btn w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
+                    >
+                        4
+                    </button>
+                    <button
+                        class="rating-btn w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
+                    >
+                        5
+                    </button>
+                </div>
                 <button
-                    id="rating-btn"
-                    class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
+                    id="submit"
+                    class="bg-orange w-full py-3 rounded-full uppercase tracking-wider text-sm transition-all hover:bg-white hover:text-orange"
                 >
-                    1
+                    Submit
                 </button>
-                <button
-                    id="rating-btn"
-                    class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
+            </section>
+            <!-- Rating state end -->
+
+            <!-- Thank you state start -->
+            <section
+                id="thankyou"
+                class="w-80 hidden bg-darkBlue flex-col items-center p-6 rounded-2xl space-y-4 md:w-96 md:space-y-6 md:p-8"
+            >
+                <img
+                    src="./images/illustration-thank-you.svg"
+                    alt="thank you illustration"
+                />
+                <!-- Add rating here -->
+                <p
+                    class="text-orange text-sm flex justify-center items-center bg-lightGray/10 py-2 px-4 rounded-full"
                 >
-                    2
-                </button>
-                <button
-                    id="rating-btn"
-                    class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
-                >
-                    3
-                </button>
-                <button
-                    id="rating-btn"
-                    class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
-                >
-                    4
-                </button>
-                <button
-                    id="rating-btn"
-                    class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
-                >
+                    You selected
+                    <span class="rating-text inline-block mx-1">4</span> out of
                     5
-                </button>
-            </div>
-
-            <button
-                id="submit"
-                class="bg-orange w-full py-3 rounded-full uppercase tracking-wider text-sm transition-all hover:bg-white hover:text-orange"
-            >
-                Submit
-            </button>
-        </section>
-
-        <!-- Rating state end -->
-
-        <!-- Thank you state start -->
-
-        <section
-            id="thankyou"
-            class="w-80 hidden bg-darkBlue flex-col items-center p-6 rounded-2xl space-y-4 md:w-96 md:space-y-6 md:p-8"
-        >
-            <img
-                src="./images/illustration-thank-you.svg"
-                alt="thank you illustration"
-            />
-
-            <!-- Add rating here -->
-            <p
-                class="text-orange text-sm flex justify-center items-center bg-lightGray/10 py-2 px-4 rounded-full"
-            >
-                You selected
-                <span class="rating-text inline-block mx-1">4</span> out of 5
-            </p>
-
-            <h1 class="text-2xl font-bold">Thank You!</h1>
-
-            <p class="text-center text-sm text-mediumGray">
-                We appreciate you taking the time to give a rating. If you ever
-                need more support, don’t hesitate to get in touch!
-            </p>
-        </section>
-
-        <!-- Thank you state end -->
+                </p>
+                <h1 class="text-2xl font-bold">Thank You!</h1>
+                <p class="text-center text-sm text-mediumGray">
+                    We appreciate you taking the time to give a rating. If you
+                    ever need more support, don’t hesitate to get in touch!
+                </p>
+            </section>
+            <!-- Thank you state end -->
+        </main>
 
         <footer class="absolute bottom-2 place-self-center">
             <p class="text-xs font-thin">
