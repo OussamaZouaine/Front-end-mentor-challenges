@@ -47,26 +47,31 @@
 
             <div class="flex justify-between">
                 <button
+                    id="rating-btn"
                     class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
                 >
                     1
                 </button>
                 <button
+                    id="rating-btn"
                     class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
                 >
                     2
                 </button>
                 <button
+                    id="rating-btn"
                     class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
                 >
                     3
                 </button>
                 <button
+                    id="rating-btn"
                     class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
                 >
                     4
                 </button>
                 <button
+                    id="rating-btn"
                     class="w-10 p-2 flex justify-center items-center bg-lightGray/10 rounded-full text-mediumGray font-bold transition-all hover:bg-orange hover:text-white focus:bg-lightGray focus:text-white"
                 >
                     5
@@ -74,6 +79,7 @@
             </div>
 
             <button
+                id="submit"
                 class="bg-orange w-full py-3 rounded-full uppercase tracking-wider text-sm transition-all hover:bg-white hover:text-orange"
             >
                 Submit
@@ -86,7 +92,7 @@
 
         <section
             id="thankyou"
-            class="w-80 bg-darkBlue flex flex-col items-center p-6 rounded-2xl space-y-4 md:w-96 md:space-y-6 md:p-8"
+            class="w-80 hidden bg-darkBlue flex flex-col items-center p-6 rounded-2xl space-y-4 md:w-96 md:space-y-6 md:p-8"
         >
             <img
                 src="./images/illustration-thank-you.svg"
@@ -98,7 +104,7 @@
                 class="text-orange text-sm flex justify-center items-center bg-lightGray/10 py-2 px-4 rounded-full"
             >
                 You selected
-                <span class="rating inline-block mx-1">4</span> out of 5
+                <span class="rating-text inline-block mx-1">4</span> out of 5
             </p>
 
             <h1 class="text-2xl font-bold">Thank You!</h1>
@@ -131,5 +137,7 @@
                 .
             </p>
         </footer>
+
+        <script src="./js/main.js"></script>
     </body>
 </html>
